@@ -84,7 +84,4 @@ forward(190)
 end_fill()
 
 #end of drawing a roof
-
-
-
 exitonclick()
