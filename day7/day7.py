@@ -2,18 +2,18 @@ temperature = int(input("please enter temperature : "))
 
 print((temperature * 1.8)+32)
 
-age = int(input("please enter your age"))
+age = int(input("please enter your age :"))
 
-print(age > 20 and age > 12)
+print(age < 20 and age >12)
 
 
 rectangle_angle1 =  int(input("please enter side of a triangle : "))
 
 
-rectangle_angle2 =  int(input("please enter second side of a triangle : "))
+rectangle_angle2 =  int(input("please enter second side of a rectangle : "))
 
+print(rectangle_angle1 * rectangle_angle2)
 
-rectangle_angle3 =  int(input("please enter third side of a triangle : "))
 
 num1 = int(input("please enter first number :"))
 
