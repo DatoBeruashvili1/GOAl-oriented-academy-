@@ -7,7 +7,7 @@ age = int(input("please enter your age :"))
 print(age < 20 and age >12)
 
 
-rectangle_angle1 =  int(input("please enter side of a triangle : "))
+rectangle_angle1 =  int(input("please enter side of a rectangle : "))
 
 
 rectangle_angle2 =  int(input("please enter second side of a rectangle : "))

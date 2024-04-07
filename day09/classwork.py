@@ -1,9 +1,9 @@
-# num1 = 20
+num1 = 20
 
-# num2 = 19
+num2 = 19
 
-# if num1 > num2 :
-#     print("goa")
+if num1 > num2 :
+    print("goa")
 
 
 mom = "natia"
