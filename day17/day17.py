@@ -1,20 +1,20 @@
-# def combine_functions(input_string, char_to_find):
-#     lowercase_string = input_string.lower()
-#     char_index = lowercase_string.find(char_to_find)
+def combine_functions(input_string, char_to_find):
+    lowercase_string = input_string.lower()
+    char_index = lowercase_string.find(char_to_find)
     
-#     capitalized_string = lowercase_string.capitalize()
+    capitalized_string = lowercase_string.capitalize()
     
     
-#     uppercase_char = capitalized_string[char_index].upper()
+    uppercase_char = capitalized_string[char_index].upper()
     
-#     return capitalized_string.replace(capitalized_string[char_index], uppercase_char)
+    return capitalized_string.replace(capitalized_string[char_index], uppercase_char)
 
 
-# input_string = "o"
-# char_to_find = "k"
+input_string = "o"
+char_to_find = "k"
 
-# result = combine_functions(input_string, char_to_find)
-# print(result)
+result = combine_functions(input_string, char_to_find)
+print(result)
 
 
 

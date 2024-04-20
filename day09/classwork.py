@@ -15,17 +15,13 @@ sister = "mari"
 brother ="demetre"
 
 if mom == "natia" : 
-    print("mom")
-
-if dad == "kaxa" : 
-    print("dad")
-
+    print("mom") 
+if dad == "kaxa" :
+    print("kaxa")
 if sister == "mari" :
-    print("sister")
-
+    print("mari")
 if brother == "demetre" :
-    print("brother")
-
+    print("demetre")
 
 
 

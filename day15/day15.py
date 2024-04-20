@@ -34,15 +34,13 @@ print(int(lenght1 + lenght2 + width1 + width2))
 
  
 def my_sum_func(numbers_list) :
+  
   sum = 0 
-
   for i in numbers_list :
     sum = sum + i
-
     print(sum)
 
-
-my_sum_func = ([1,2,3,4,5,])
+my_sum_func = ([1,2,3,4,5])
 
 
 
@@ -58,7 +56,7 @@ def find_min_max(numbers_list1) :
             
     print(min, max)
     
-find_min_max([1,2,3,4,5,])
+find_min_max([1,2,3,4,5])
 
 
 
