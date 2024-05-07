@@ -5,8 +5,8 @@ lowercase_name = user_name.lower()
 
 if lowercase_name == user_name.lower():
     print("Hello,", user_name.title(), "your name matches its lowercase variant.")
-else:
-    print("The names do not match.")
+elif lowercase_name == user_name.upper() :
+    print("word doesnot match")
 
 
 
@@ -128,24 +128,6 @@ family_string = "-".join(family_members)
 print(family_string)
 
 
-words = []
-for i in range(5):
-    words = input("Enter word " + str(i+1) + ": ")
-    words.append(words)
-
-
-join_value = input("Enter the joining value: ")
-
-
-for i in range(1, len(words), 2):
-    words[i] = words[i] + join_value
-
-
-result = ""
-for word in words:
-    result += word
-
-print(result)
 
 
 

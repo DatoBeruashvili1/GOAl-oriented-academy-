@@ -32,7 +32,7 @@ list = [1,2,3,4,5,6,7,8,9,10]
 separator = []
 
 
-word = input("please enter any word")
+word = input("please enter any word :")
 
 modified_word = ""
 
@@ -47,22 +47,6 @@ elif word == word.upper() :
 
 
 
-def most_frequent(numbers):
-    
-    frequency = {}
-    for num in numbers:
-        if num in frequency:
-            frequency[num] += 1
-        else:
-            frequency[num] = 1
-
-    
-    max_frequency = max(frequency.values())
-
-    return max_frequency
-
-numbers = [1, 2, 3, 2, 2, 1, 3, 3, 3, 2]
-print(most_frequent(numbers))
 
 
 
