@@ -31,7 +31,3 @@ print(True or True)
 print(False and False)
 
 print(False or False)
-
-
-
-
