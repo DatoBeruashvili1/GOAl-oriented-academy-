@@ -1,0 +1,45 @@
+div {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+
+    /* animation-name: firstanimation;
+    animation-duration: 5s;
+    animation-iteration-count: 5; */
+
+    animation: firstanimation 5s infinite 2s ease reverse;
+
+}
+
+
+@keyframes firstanimation {
+    0% {
+        background-color: red;
+        width: 150;
+    }
+
+    20% {
+        background-color: blue;
+        width: 400px;
+    }
+
+    40% {
+       background-color: black;
+       width: 60px;
+    }
+
+    60% {
+        background-color: yellow;
+        width: 150px;
+    }
+
+    80% {
+        background-color: blueviolet;
+        width: 500px;
+    }
+
+    100% {
+        background-color: aqua;
+        width: 200px;
+    }
+}
