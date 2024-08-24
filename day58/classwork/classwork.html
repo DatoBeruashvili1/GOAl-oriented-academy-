@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #colorDiv {
+      width: 200px;
+      height: 200px;
+      background-color: white;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <div id="colorDiv"></div>
+  <button onclick="changeColor('red')">Red</button>
+  <button onclick="changeColor('blue')">Blue</button>
+  <button onclick="changeColor('green')">Green</button>
+  <button onclick="changeColor('purple')">Purple</button>
+  <button onclick="changeColor('black')">Black</button>
+
+  <script>
+    function changeColor(color) {
+      document.getElementById("colorDiv").style.backgroundColor = color;
+    }
+  </script>
+</body>
+</html>
