@@ -5,10 +5,10 @@ class Animal{
     }
 
     capabilities(){
-        console.log("this animal can breathe")
-        console.log("this animal can move")
-        console.log("this animal can agressive")
-        console.log("this animal can eat")
+        console.log(this.name +  "can breathe")
+        console.log(this.name +  "can move")
+        console.log(this.name  +  "can agressive")
+        console.log(this.name +  "can eat")
     }
 }
 class Cat extends Animal{
@@ -17,7 +17,7 @@ class Cat extends Animal{
         console.log("")
     }
 }
-let cat = new Cat("aizen", 1)
+const cat = new Cat("aizen", 1)
 cat.capabilities();
 
 
@@ -33,11 +33,11 @@ class Car{
       
     }
 }
-class porche extends Animal{
+class Porche extends Car{
     capabilities(){
         super.capabilities();
         console.log("")
     }
 }
-let porche = new Cat("porche", "911 GT-3 RS")
+let porche = new Porche("porche", "911 GT-3 RS")
 porche.capabilities();
