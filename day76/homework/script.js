@@ -7,3 +7,4 @@ for (let i = 0; i < temp.length; i++) {
     console.log(`${times[j]}: ${temp[i][j]}`);
   }
 }
+
