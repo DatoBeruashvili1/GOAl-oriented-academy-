@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ქაუნთერი LocalStorage-ით</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f2f2f2;
+      margin: 0;
+    }
+    .counter-container {
+      text-align: center;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .counter-value {
+      font-size: 3em;
+      margin: 20px 0;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1.2em;
+      margin: 5px;
+      cursor: pointer;
+      border: none;
+      background-color: #3498db;
+      color: white;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="counter-container">
+    <h1>ქაუნთერი</h1>
+    <div id="counter-value" class="counter-value">0</div>
+    <div>
+      <button onclick="increment()">მზარდი</button>
+      <button onclick="decrement()">შემცირება</button>
+      <button onclick="reset()">გახსენი</button>
+    </div>
+  </div>
+
+  <script>
+
+    function getCounterValue() {
+      const savedValue = localStorage.getItem('counter');
+      return savedValue ? parseInt(savedValue) : 0; //
+    }
+
+    
+    function setCounterValue(value) {
+      localStorage.setItem('counter', value);
+      document.getElementById('counter-value').textContent = value;
+    }
+
+ 
+    function increment() {
+      const currentValue = getCounterValue();
+      setCounterValue(currentValue + 1);
+    }
+
+    function decrement() {
+      const currentValue = getCounterValue();
+      setCounterValue(currentValue - 1);
+    }
+
+    
+    function reset() {
+      setCounterValue(0);
+    }
+
+    
+    window.onload = function() {
+      const initialValue = getCounterValue();
+      document.getElementById('counter-value').textContent = initialValue;
+    };
+  </script>
+
+</body>
+</html>

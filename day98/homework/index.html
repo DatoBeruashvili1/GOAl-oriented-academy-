@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>მომხმარებლის თამაში</title>
+  <link href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+
+  <div id="name-container">
+    <h1>გთხოვთ, შეიყვანოთ თქვენი სახელი:</h1>
+    <input type="text" id="username" placeholder="სახელი" required>
+    <button onclick="setUsername()">დამახსოვრებული</button>
+  </div>
+
+
+  <div id="game-container" class="hidden">
+    <h1>გამარჯობა, <span id="user-name"></span>!</h1>
+    <p>თქვენი ქულა: <span id="score">0</span></p>
+    
+    <div>
+      <label for="color-picker">აირჩიეთ ფონური ფერი:</label>
+      <input type="color" id="color-picker" onchange="changeBackgroundColor()">
+    </div>
+
+    <p>შეიყვანეთ რიცხვი:</p>
+    <input type="number" id="guess-input" placeholder="შეიყვანეთ რიცხვი">
+    <button onclick="checkGuess()">გამოცნობა</button>
+
+    <p id="difficulty">ბოლო რეგულაცია: <span id="difficulty-level">1-2</span></p>
+  </div>
+
+</body>
+</html>

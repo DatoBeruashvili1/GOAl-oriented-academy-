@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>People Data Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .form-container {
+      margin-bottom: 20px;
+    }
+
+    .person-card {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-top: 10px;
+      background-color: #f9f9f9;
+    }
+
+    input {
+      padding: 8px;
+      margin: 5px;
+      width: 200px;
+    }
+
+    button {
+      padding: 10px;
+      margin-top: 10px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    .person-info {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>People Data Form</h1>
+
+  <div class="form-container">
+    <label for="first-name">First Name:</label>
+    <input type="text" id="first-name" placeholder="Enter First Name">
+
+    <label for="last-name">Last Name:</label>
+    <input type="text" id="last-name" placeholder="Enter Last Name">
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" placeholder="Enter Age">
+
+    <label for="personal-number">Personal Number (ID):</label>
+    <input type="text" id="personal-number" placeholder="Enter Personal Number">
+
+    <label for="height">Height:</label>
+    <input type="number" id="height" placeholder="Enter Height (in cm)">
+
+    <label for="description">Description:</label>
+    <input type="text" id="description" placeholder="Enter Description">
+
+    <button onclick="addPerson()">Add Person</button>
+  </div>
+
+  <h2>People List:</h2>
+  <div id="people-list"></div>
+
+  <script>
+    function generateEmail(firstName, lastName, age) {
+      // Generate a random number to add to the email address
+      const randomNumber = Math.floor(Math.random() * 1000);
+      return `${firstName.toLowerCase()}.${lastName.toLowerCase()}.${age}${randomNumber}@example.com`;
+    }
+
+    function addPerson() {
+      // Get the values from the input fields
+      const firstName = document.getElementById("first-name").value;
+      const lastName = document.getElementById("last-name").value;
+      const age = document.getElementById("age").value;
+      const personalNumber = document.getElementById("personal-number").value;
+      const height = document.getElementById("height").value;
+      const description = document.getElementById("description").value;
+
+      // Generate email based on input fields
+      const email = generateEmail(firstName, lastName, age);
+
+      // Create a new div for the person's info
+      const personCard = document.createElement("div");
+      personCard.classList.add("person-card");
+
+      // Add the person's information to the div
+      personCard.innerHTML = `
+        <h3>${firstName} ${lastName}</h3>
+        <div class="person-info">
+          <strong>Age:</strong> ${age} years<br>
+          <strong>Personal Number (ID):</strong> ${personalNumber}<br>
+          <strong>Height:</strong> ${height} cm<br>
+          <strong>Description:</strong> ${description}<br>
+          <strong>Email:</strong> ${email}
+        </div>
+      `;
+
+      // Append the new person card to the people list
+      document.getElementById("people-list").appendChild(personCard);
+
+      // Clear the input fields after adding
+      document.getElementById("first-name").value = '';
+      document.getElementById("last-name").value = '';
+      document.getElementById("age").value = '';
+      document.getElementById("personal-number").value = '';
+      document.getElementById("height").value = '';
+      document.getElementById("description").value = '';
+    }
+  </script>
+
+</body>
+</html>

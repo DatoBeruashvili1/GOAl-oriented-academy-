@@ -1,0 +1,5 @@
+.square {
+    width: 100px;       /* Set the width */
+    height: 100px;      /* Set the height (same as width for a square) */
+    background-color: #3498db;  /* Set a background color */
+}
